@@ -1,2 +1,2 @@
-# Web-Cam-access-and-video-recording
+# Accessing Webcam
 Web Cam access and video recording
