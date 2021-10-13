@@ -15,11 +15,15 @@ public:
 	}
 };
 
-void insertathead(node*&head,int data)
+void insertattail(node*&head,int data)
 {
+	node *temp=head;
+	while(temp->next!=NULL)
+	{
+		temp=temp->next;
+	}
 	node* n= new node(data);
-	n->next=head;
-	head=n;
+	temp->next=n;
 }
 
 void print(node*&head)
@@ -40,14 +44,11 @@ int main()
 #endif
 	
 	node*head=NULL;
-	insertathead(head,5);
-	insertathead(head,4);
-	insertathead(head,3);
-	insertathead(head,2);
+	insertattail(head,5);
+	insertattail(head,4);
+	insertattail(head,3);
+	insertattail(head,2);
 
 	print(head);
-
-
-
 	return 0;
 }
